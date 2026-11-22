@@ -1,0 +1,146 @@
+{
+  "config": {
+    "top_k": 10,
+    "user_knn_k": 40,
+    "item_knn_k": 120,
+    "factors": 64,
+    "wrmf_factors": 16,
+    "wrmf_alpha": 5.0,
+    "wrmf_reg": 0.1,
+    "wrmf_iterations": 5,
+    "bpr_lr": 0.01,
+    "bpr_reg": 0.0001,
+    "bpr_epochs": 300,
+    "lightgcn_lr": 0.01,
+    "lightgcn_reg": 0.0001,
+    "lightgcn_epochs": 800,
+    "lightgcn_layers": 2,
+    "eval_every": 50,
+    "patience_checks": 4
+  },
+  "seeds": [
+    42,
+    43,
+    44,
+    45,
+    46
+  ],
+  "device": "cuda",
+  "dataset": {
+    "users": 1892,
+    "artists": 17632,
+    "pairs": 92834
+  },
+  "diagnostics": [
+    {
+      "seed": 42,
+      "split": {
+        "train_pairs": 76546,
+        "validation_pairs": 8125,
+        "test_pairs": 8163,
+        "catalog_repairs": 2282,
+        "test_users": 1871,
+        "catalog_items": 17632
+      },
+      "UserKNN_validation_nDCG@10": 0.16595581858579408,
+      "ItemKNN_validation_nDCG@10": 0.16016115105951514,
+      "BPR-MF": {
+        "best_validation_nDCG@10": 0.13826377361809908,
+        "best_epoch": 300.0
+      },
+      "LightGCN": {
+        "best_validation_nDCG@10": 0.18509859503855253,
+        "best_epoch": 700.0
+      },
+      "elapsed_seconds": 55.577773332595825
+    },
+    {
+      "seed": 43,
+      "split": {
+        "train_pairs": 76469,
+        "validation_pairs": 8165,
+        "test_pairs": 8200,
+        "catalog_repairs": 2205,
+        "test_users": 1870,
+        "catalog_items": 17632
+      },
+      "UserKNN_validation_nDCG@10": 0.16596774912817183,
+      "ItemKNN_validation_nDCG@10": 0.1581085188095945,
+      "BPR-MF": {
+        "best_validation_nDCG@10": 0.13414137313199595,
+        "best_epoch": 300.0
+      },
+      "LightGCN": {
+        "best_validation_nDCG@10": 0.19074474527218502,
+        "best_epoch": 800.0
+      },
+      "elapsed_seconds": 54.26464486122131
+    },
+    {
+      "seed": 44,
+      "split": {
+        "train_pairs": 76489,
+        "validation_pairs": 8184,
+        "test_pairs": 8161,
+        "catalog_repairs": 2225,
+        "test_users": 1871,
+        "catalog_items": 17632
+      },
+      "UserKNN_validation_nDCG@10": 0.16613886475301667,
+      "ItemKNN_validation_nDCG@10": 0.16159531482329934,
+      "BPR-MF": {
+        "best_validation_nDCG@10": 0.13761399015310752,
+        "best_epoch": 300.0
+      },
+      "LightGCN": {
+        "best_validation_nDCG@10": 0.18739126529626451,
+        "best_epoch": 700.0
+      },
+      "elapsed_seconds": 52.85154891014099
+    },
+    {
+      "seed": 45,
+      "split": {
+        "train_pairs": 76465,
+        "validation_pairs": 8188,
+        "test_pairs": 8181,
+        "catalog_repairs": 2201,
+        "test_users": 1869,
+        "catalog_items": 17632
+      },
+      "UserKNN_validation_nDCG@10": 0.1722499877546859,
+      "ItemKNN_validation_nDCG@10": 0.16252667656085593,
+      "BPR-MF": {
+        "best_validation_nDCG@10": 0.13710357293576178,
+        "best_epoch": 300.0
+      },
+      "LightGCN": {
+        "best_validation_nDCG@10": 0.18698619500578906,
+        "best_epoch": 750.0
+      },
+      "elapsed_seconds": 55.453261613845825
+    },
+    {
+      "seed": 46,
+      "split": {
+        "train_pairs": 76495,
+        "validation_pairs": 8151,
+        "test_pairs": 8188,
+        "catalog_repairs": 2231,
+        "test_users": 1869,
+        "catalog_items": 17632
+      },
+      "UserKNN_validation_nDCG@10": 0.1595961471431503,
+      "ItemKNN_validation_nDCG@10": 0.15426082128027085,
+      "BPR-MF": {
+        "best_validation_nDCG@10": 0.13284275296116965,
+        "best_epoch": 300.0
+      },
+      "LightGCN": {
+        "best_validation_nDCG@10": 0.18104136907982973,
+        "best_epoch": 650.0
+      },
+      "elapsed_seconds": 51.78822040557861
+    }
+  ]
+}
